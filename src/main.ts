@@ -13,6 +13,7 @@ const initApp = (): void => {
 
         const input = document.getElementById("newItem") as HTMLInputElement
         const newEntryText: string = input.value.trim()
+        input.value = ''
         if (!newEntryText) return
 
         const itemId: number = fullList.list.length
