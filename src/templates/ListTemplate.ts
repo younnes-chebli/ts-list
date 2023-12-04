@@ -31,7 +31,7 @@ export default class ListTemplate implements DOMList {
             check.checked = item.checked
             li.append(check)
 
-            check.addEventListener("change", () => {
+            check.addEventListener("change", (): void => {
                 check.checked = !item.checked
                 fullList.save()
             })
@@ -46,7 +46,7 @@ export default class ListTemplate implements DOMList {
             button.textContent = "X"
             li.append(button)
 
-            button.addEventListener("click", () => {
+            button.addEventListener("click", (): void => {
                 fullList.removeItem(item.id)
                 this.render(fullList)
             })
